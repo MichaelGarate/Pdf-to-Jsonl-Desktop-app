@@ -1,0 +1,18 @@
+from cx_Freeze import setup, Executable
+
+#archivos necesarios para funcionar
+files = []
+
+#archivo py que ejecuta la app
+exe = Executable(script='codigoQR.py', base='Win32GUI')
+
+setup(
+name = 'Crear codigo QR',
+version = '1.0',
+author = 'Michael Garate',
+options ={'build_exe':{}},
+executables = [exe]
+)
+
+#en terminal
+py app.py build
